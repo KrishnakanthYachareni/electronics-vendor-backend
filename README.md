@@ -8,7 +8,7 @@ Start the backend server before the frontend client.
 
 1. Install [PostgreSQL](https://www.postgresql.org/download/)
 2. Configure datasource in `application.yml`.
-3. Insert sample data ()
+3. Insert sample data [import.sql](https://github.com/KrishnakanthYachareni/electronics-vendor-backend/blob/master/src/main/resources/import.sql) into postgres using PGAdmin tool.
 4. Run `mvn install`.
 5. Run `mvn spring-boot:run`. 
 6. Spring Boot will import mock data into database by executing `import.sql` automatically. 
