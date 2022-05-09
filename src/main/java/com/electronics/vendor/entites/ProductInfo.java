@@ -13,6 +13,11 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 @Entity
 @Data
@@ -39,6 +44,10 @@ public class ProductInfo implements Serializable {
     private Date createTime;
     @UpdateTimestamp
     private Date updateTime;
+    
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "storeId")
+    private List<Stores> storeId;
 
     public ProductInfo() {
     }
