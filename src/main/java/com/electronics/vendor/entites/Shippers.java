@@ -16,10 +16,6 @@ import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import lombok.Data;
 
-/**
- *
- * @author bshreejit
- */
 @Data
 @Entity
 public class Shippers implements Serializable {

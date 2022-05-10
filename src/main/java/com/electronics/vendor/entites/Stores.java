@@ -11,27 +11,24 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+
 import lombok.Data;
 
-/**
- *
- * @author bshreejit
- */
 @Data
 @Entity
-public class Stores implements Serializable{
-    
+public class Stores implements Serializable {
+
     @Id
     @NotNull
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long storeId;
-    
+
     private String name;
-    
+
     private String address;
-    
+
     private long phone_number;
-    
+
     public Stores() {
     }
 }

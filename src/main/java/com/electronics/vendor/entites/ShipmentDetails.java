@@ -6,6 +6,7 @@
 package com.electronics.vendor.entites;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -16,31 +17,28 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
+
 import lombok.Data;
 
-/**
- *
- * @author bshreejit
- */
 @Data
 @Entity
 public class ShipmentDetails implements Serializable {
-    
+
     @Id
     @NotNull
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long shipmentId;
-    
+
     @OneToOne(targetEntity = OrderMain.class, fetch = FetchType.LAZY)
 //    @JoinColumn(nullable = false, name = "orderId")
     @JoinColumn(name = "orderId")
     private OrderMain orderMain;
-    
+
     @ManyToOne
-    @JsonIgnore 
-    @JoinColumn(name="shipperId", nullable=false)
+    @JsonIgnore
+    @JoinColumn(name = "shipperId", nullable = false)
     private Shippers shippers;
-    
-    public ShipmentDetails(){
+
+    public ShipmentDetails() {
     }
 }
