@@ -10,6 +10,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Data
@@ -42,5 +43,9 @@ public class User implements Serializable {
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonIgnore  // fix bi-direction toString() recursion problem
     private Cart cart;
+    
+    @OneToMany(mappedBy = "cardId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonIgnore 
+    private List<CardDetails> cardId;
 }
 

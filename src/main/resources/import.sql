@@ -75,3 +75,37 @@ INSERT INTO "public"."cart" VALUES (2147483641);
 INSERT INTO "public"."cart" VALUES (2147483642);
 INSERT INTO "public"."cart" VALUES (2147483643);
 INSERT INTO "public"."cart" VALUES (2147483645);
+
+-- ----------------------------
+-- Records of card details
+-- ----------------------------
+INSERT INTO "public"."card_details" VALUES (1, '6011556448578945', 223, 6, 2025, 'D', 2147483641);
+INSERT INTO "public"."card_details" VALUES (2, '6011556448578946', 224, 7, 2026, 'C', 2147483642);
+INSERT INTO "public"."card_details" VALUES (3, '6011556448578947', 225, 8, 2027, 'D', 2147483643);
+INSERT INTO "public"."card_details" VALUES (4, '6011556448578948', 226, 9, 2028, 'C', 2147483645);
+INSERT INTO "public"."card_details" VALUES (5, '6011556448578999', 223, 6, 2025, 'D', 2147483641);
+
+-- ----------------------------
+-- Records of shippers
+-- ----------------------------
+INSERT INTO "public"."shippers" VALUES (222);
+INSERT INTO "public"."shippers" VALUES (223);
+INSERT INTO "public"."shippers" VALUES (224);
+INSERT INTO "public"."shippers" VALUES (225);
+
+-- ----------------------------
+-- Records of shipment details
+-- ----------------------------
+INSERT INTO "public"."shipment_details" VALUES (4421, 2147483643, 222);
+INSERT INTO "public"."shipment_details" VALUES (4431, 2147483649, 223);
+
+-- ----------------------------
+-- Records of stores
+-- ----------------------------
+INSERT INTO "public"."stores" VALUES (1,'Dallas', 'A Mart', 20252147483641);
+INSERT INTO "public"."stores" VALUES (2,'Hattiesburg', 'B Mart', 20262147483642);
+INSERT INTO "public"."stores" VALUES (3,'Jackson', 'C Mart', 2027147483643);
+
+
+
+
