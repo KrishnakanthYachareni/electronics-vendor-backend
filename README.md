@@ -3,6 +3,7 @@
 Demo projects for electronics vendor backend api
 
 # Getting Started
+Recorded Demo: https://www.youtube.com/watch?v=l-dfgm-8nQU
 
 Start the backend server before the frontend client.
 
